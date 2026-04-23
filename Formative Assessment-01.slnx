@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="HomeAffairsDigitalIdentityProcessor/HomeAffairsDigitalIdentityProcessor.csproj" Id="cb36ce02-73d1-420a-a030-d2b0fb861a4f" />
+  <Project Path="Q02/Q02.csproj" Id="cecae213-d3f1-4c75-a1db-c0b310120f01" />
+  <Project Path="Q1/Q1.csproj" />
+  <Project Path="Q3/Q3.csproj" Id="813c0bfe-655a-4cb2-ac66-4d1da7c764d3" />
+  <Project Path="sectionBQ1/sectionBQ1.csproj" Id="e306218e-2c35-4520-a7f1-6c7a1d04eb91" />
+</Solution>
