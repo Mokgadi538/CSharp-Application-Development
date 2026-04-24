@@ -95,7 +95,7 @@
             lblValidationResult.TabIndex = 13;
             // 
             // txtName
-            // 
+            // Mokgadi
             txtName.Location = new Point(791, 124);
             txtName.Name = "txtName";
             txtName.Size = new Size(251, 31);
