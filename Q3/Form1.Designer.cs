@@ -29,18 +29,20 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            listBox1 = new ListBox();
-            label1 = new Label();
+            lblStatus = new Label();
+            btnRemove = new Button();
+            btnAdd = new Button();
             textBox1 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
+            label1 = new Label();
+            listBox1 = new ListBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(lblStatus);
+            panel1.Controls.Add(btnRemove);
+            panel1.Controls.Add(btnAdd);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(listBox1);
@@ -50,13 +52,47 @@
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
-            // listBox1
+            // lblStatus
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(87, 111);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(1065, 279);
-            listBox1.TabIndex = 0;
+            lblStatus.AutoSize = true;
+            lblStatus.Location = new Point(140, 566);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(0, 25);
+            lblStatus.TabIndex = 5;
+            // 
+            // btnRemove
+            // 
+            btnRemove.BackColor = Color.Red;
+            btnRemove.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRemove.ForeColor = SystemColors.Control;
+            btnRemove.Location = new Point(303, 472);
+            btnRemove.Name = "btnRemove";
+            btnRemove.Size = new Size(168, 34);
+            btnRemove.TabIndex = 4;
+            btnRemove.Text = "Remove";
+            btnRemove.UseVisualStyleBackColor = false;
+            btnRemove.Click += button2_Click;
+            // 
+            // btnAdd
+            // 
+            btnAdd.BackColor = Color.Blue;
+            btnAdd.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAdd.ForeColor = SystemColors.Control;
+            btnAdd.Location = new Point(87, 472);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(162, 34);
+            btnAdd.TabIndex = 3;
+            btnAdd.Text = "Add Language";
+            btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += button1_Click;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(87, 413);
+            textBox1.Name = "textBox1";
+            textBox1.PlaceholderText = "Enter Programming Language";
+            textBox1.Size = new Size(556, 31);
+            textBox1.TabIndex = 2;
             // 
             // label1
             // 
@@ -68,39 +104,13 @@
             label1.TabIndex = 1;
             label1.Text = "My Favourite Programming Language";
             // 
-            // textBox1
+            // listBox1
             // 
-            textBox1.Location = new Point(87, 413);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Enter Programming Language";
-            textBox1.Size = new Size(556, 31);
-            textBox1.TabIndex = 2;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.Blue;
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = SystemColors.Control;
-            button1.Location = new Point(87, 472);
-            button1.Name = "button1";
-            button1.Size = new Size(162, 34);
-            button1.TabIndex = 3;
-            button1.Text = "Add Language";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.Red;
-            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = SystemColors.Control;
-            button2.Location = new Point(303, 472);
-            button2.Name = "button2";
-            button2.Size = new Size(112, 34);
-            button2.TabIndex = 4;
-            button2.Text = "Remove";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            listBox1.FormattingEnabled = true;
+            listBox1.Location = new Point(87, 111);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(1065, 279);
+            listBox1.TabIndex = 0;
             // 
             // Form1
             // 
@@ -120,8 +130,9 @@
         private Panel panel1;
         private Label label1;
         private ListBox listBox1;
-        private Button button2;
-        private Button button1;
+        private Button btnRemove;
+        private Button btnAdd;
         private TextBox textBox1;
+        private Label lblStatus;
     }
 }

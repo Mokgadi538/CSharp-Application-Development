@@ -22,7 +22,7 @@ namespace sectionBQ1
 
             for (int i = 1; i <= numResidents; i++)
             {
-                Console.WriteLine($"" +
+                Console.WriteLine("" +
                     $"(--- Resident {i} ---)");
 
                 Console.Write("Name: ");
@@ -37,21 +37,23 @@ namespace sectionBQ1
                 Console.Write("Monthly Utility Usage (kWh): ");
                 int usage = ReadInt();
 
+                Console.WriteLine();
+
                 residents.Add(new Resident(name, address, account, usage));
             }
 
-            // 2. Add service requests
+            // Add service requests
             Console.Write("Enter number of service requests you want to register: ");
             int numRequests = ReadInt();
 
             for (int i = 1; i <= numRequests; i++)
             {
-                Console.WriteLine($"--- Service Request {i} ---");
+                Console.WriteLine($"Service Request {i} ");
 
                 Console.Write($"Select resident (1-{residents.Count}): ");
                 int resIndex = ReadInt() - 1;
 
-                // Validate index
+                // Index Validation
                 if (resIndex < 0 || resIndex >= residents.Count)
                 {
                     Console.WriteLine("Invalid resident selection. Try again.");
@@ -74,7 +76,7 @@ namespace sectionBQ1
                 manager.AddServiceRequest(residents[resIndex], type, priority, severity, hours);
             }
 
-            // 3. Process requests
+            // Process requests
             while (manager.HasPendingRequests())
             {
                 manager.DisplayPendingRequests();
@@ -97,12 +99,12 @@ namespace sectionBQ1
                 }
             }
 
-            // 4. Final summary
+            // Conclution and show summary
             manager.GenerateFinalSummary();
         }
 
-        // ✅ SAFE INPUT METHODS (prevents ALL your warnings)
 
+        // Reads and returns a valid integer from the user
         static int ReadInt()
         {
             while (true)

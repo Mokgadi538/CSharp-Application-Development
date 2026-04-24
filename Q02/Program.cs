@@ -40,7 +40,7 @@ namespace Q02
                 Console.Write("Incorrect PIN. Try again: ");
             }
 
-            Console.WriteLine("\nAccess Granted!");
+            Console.WriteLine("Access Granted!");
             Console.WriteLine();
 
             // Account balance validation
@@ -59,7 +59,7 @@ namespace Q02
                 Console.Write("Insufficient amount, Please try again: ");
             }
 
-            // Balance calculation after withdrawa
+            // Balance calculation after withdrawal
             decimal newBalance = accountBalance - withdrawalAmount;
 
             Console.WriteLine();
@@ -72,9 +72,9 @@ namespace Q02
             Console.WriteLine("Amount Withdrawn: " + withdrawalAmount.ToString("0.00"));
             Console.WriteLine("Updated Balance: " + newBalance.ToString("0.00"));
             Console.WriteLine("Date: " + DateTime.Now.ToString("dd MMM yyyy HH:mm:ss"));
-            Console.WriteLine("===================================");
 
-            Console.WriteLine("\nThank you for using the CTU Simple ATM System!");
+            Console.WriteLine("===================================");
+            Console.WriteLine("Thank you for using the CTU Simple ATM System!");
         }
     }
 }
