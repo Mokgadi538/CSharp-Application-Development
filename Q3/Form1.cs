@@ -1,4 +1,5 @@
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System;
+using System.Windows.Forms;
 
 namespace Q3
 {
@@ -25,7 +26,7 @@ namespace Q3
 
             string removed = listBox1.SelectedItem?.ToString() ?? "";
             listBox1.Items.RemoveAt(listBox1.SelectedIndex);
-            label1.Text = $"Removed '{removed}' at {DateTime.Now:dd MMM yyyy HH:mm:ss}";
+            label2.Text = $"Removed '{removed}' at {DateTime.Now:dd MMM yyyy HH:mm:ss}";
         }
 
         private void AddLanguage()
@@ -51,12 +52,17 @@ namespace Q3
             }
 
             listBox1.Items.Add(input);
-            label1.Text = $"Added '{input}' at {DateTime.Now:dd MMM yyyy HH:mm:ss}";
+            label2.Text = $"Added '{input}' at {DateTime.Now:dd MMM yyyy HH:mm:ss}";
             textBox1.Clear();
             textBox1.Focus();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
