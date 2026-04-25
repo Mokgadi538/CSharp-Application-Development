@@ -95,7 +95,7 @@
             lblValidationResult.TabIndex = 13;
             // 
             // txtName
-            // Mokgadi
+            // 
             txtName.Location = new Point(791, 124);
             txtName.Name = "txtName";
             txtName.Size = new Size(251, 31);
@@ -169,7 +169,7 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(250, 160, 100);
-            ClientSize = new Size(1319, 716);
+            ClientSize = new Size(1426, 716);
             Controls.Add(cmbCitizenship);
             Controls.Add(txtResults);
             Controls.Add(lblValidationResult);
