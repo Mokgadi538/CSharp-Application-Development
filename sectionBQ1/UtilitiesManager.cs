@@ -34,7 +34,7 @@ public class UtilitiesManager
             .OrderByDescending(r => r.UrgencyScore)
             .ToList();
 
-        Console.WriteLine("\n=== PENDING SERVICE REQUESTS ===");
+        Console.WriteLine("=== PENDING SERVICE REQUESTS ===");
 
         for (int i = 0; i < pending.Count; i++)
         {
@@ -44,7 +44,7 @@ public class UtilitiesManager
         }
     }
 
-    public ServiceRequest ProcessRequest(int index)
+    public ServiceRequest? ProcessRequest(int index)  
     {
         var pending = serviceRequests
             .Where(r => !r.IsProcessed)
@@ -91,9 +91,9 @@ public class UtilitiesManager
                 .First();
 
             Console.WriteLine("Highest Urgency:");
-            Console.WriteLine($"Resident: {highest.Resident.Name}");           
-            Console.WriteLine($"Service Type: {highest.RequestType}");          
-            Console.WriteLine($"Urgency Score: {highest.UrgencyScore:F2}");    
+            Console.WriteLine($"Resident: {highest.Resident.Name}");
+            Console.WriteLine($"Service Type: {highest.RequestType}");
+            Console.WriteLine($"Urgency Score: {highest.UrgencyScore:F2}");
             Console.WriteLine("Household Impact:" + (highest.Resident.MonthlyUtilityUsage > 500 ? " HIGH" : " LOW"));
         }
     }
