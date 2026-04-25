@@ -15,7 +15,7 @@ namespace sectionBQ1
             var manager = new UtilitiesManager();
             var residents = new List<Resident>();
 
-            // 1. Add residents
+            // Add residents
             Console.Write("Enter number of residents you want to register: ");
 
             int numResidents = ReadInt();
