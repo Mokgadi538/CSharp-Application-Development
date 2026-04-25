@@ -26,21 +26,21 @@ namespace Q1
             Console.Write("Enter mark for Subject 1: ");
             while (!int.TryParse(Console.ReadLine(), out subject1))
             {
-                Console.Write("Subject cannot be empty, please enter numbers only for Subject 1: ");
+                Console.Write("Please enter numbers only for Subject 1: ");
             }
 
             // Subject 2 Validation
             Console.Write("Enter mark for Subject 2: ");
             while (!int.TryParse(Console.ReadLine(), out subject2))
             {
-                Console.Write("Subject cannot be empty, please enter numbers only for Subject 2: ");
+                Console.Write("Please enter numbers only for Subject 2: ");
             }
 
             // Subject 3 Validation
             Console.Write("Enter mark for Subject 3: ");
             while (!int.TryParse(Console.ReadLine(), out subject3))
             {
-                Console.Write("Subject cannot be empty, please enter numbers only for Subject 3: ");
+                Console.Write("Please enter numbers only for Subject 3: ");
             }
 
             // Calculations
