@@ -1,5 +1,4 @@
-﻿
-using sectionBQ1;
+﻿using sectionBQ1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +11,7 @@ public class UtilitiesManager
     public void AddServiceRequest(Resident resident, string requestType, int priorityLevel,
                                   int severityLevel, int estimatedResolutionHours)
     {
-        var request = new ServiceRequest( resident, requestType,
+        var request = new ServiceRequest(resident, requestType,
                                          priorityLevel, severityLevel,
                                          estimatedResolutionHours);
 
@@ -20,7 +19,6 @@ public class UtilitiesManager
         serviceRequests.Add(request);
     }
 
-    // FIXED: public + returns double
     public double CalculateUrgencyScore(ServiceRequest request)
     {
         double priorityWeight = 10.0 / request.PriorityLevel;
@@ -93,9 +91,9 @@ public class UtilitiesManager
                 .First();
 
             Console.WriteLine("Highest Urgency:");
-            Console.WriteLine($"{highest.Resident.Name}");
-            Console.WriteLine($"{highest.RequestType}");
-            Console.WriteLine($"Score: {highest.UrgencyScore:F2}");
+            Console.WriteLine($"Resident: {highest.Resident.Name}");           
+            Console.WriteLine($"Service Type: {highest.RequestType}");          
+            Console.WriteLine($"Urgency Score: {highest.UrgencyScore:F2}");    
             Console.WriteLine("Household Impact:" + (highest.Resident.MonthlyUtilityUsage > 500 ? " HIGH" : " LOW"));
         }
     }
