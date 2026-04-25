@@ -81,7 +81,7 @@ public class UtilitiesManager
     {
         var processed = serviceRequests.Where(r => r.IsProcessed).ToList();
 
-        Console.WriteLine("\n=== FINAL MUNICIPAL SUMMARY ===");
+        Console.WriteLine("=== FINAL MUNICIPAL SUMMARY ===");
         Console.WriteLine($"Total Processed: {processed.Count}");
 
         if (processed.Any())
